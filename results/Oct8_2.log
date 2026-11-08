@@ -1,0 +1,54 @@
+running 10 seeds, M in [10, 30, 50]
+  seed 3 done in 52s
+  seed 5 done in 52s
+  seed 9 done in 53s
+  seed 0 done in 53s
+  seed 8 done in 53s
+  seed 2 done in 54s
+  seed 7 done in 54s
+  seed 6 done in 54s
+  seed 1 done in 54s
+  seed 4 done in 55s
+
+d=10, n_train=800, noise var=0.01, 10 seeds; test MSE mean +- std (lower is better)
+
+=== M = 10 trees ===
+method                                 test MSE   median lifetime   grid-edge picks
+Mondrian (width)                 0.1702 +- 0.0162                63              0/10
+Mondrian, oracle features        0.0222 +- 0.0018               251              2/10
+Mondrian-CART (new)              0.0328 +- 0.0017               261              1/10
+RF (sklearn)                     0.0287 +- 0.0016                 -                 -
+Laplacian kernel ridge           0.0122 +- 0.0006                 -                 -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.1374 +- 0.0048
+  Mondrian-CART (new) - RF (sklearn): +0.0040 +- 0.0005
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0106 +- 0.0007
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0205 +- 0.0006
+
+=== M = 30 trees ===
+method                                 test MSE   median lifetime   grid-edge picks
+Mondrian (width)                 0.1584 +- 0.0082              47.3              0/10
+Mondrian, oracle features        0.0183 +- 0.0006               251              3/10
+Mondrian-CART (new)              0.0280 +- 0.0015               699              2/10
+RF (sklearn)                     0.0262 +- 0.0015                 -                 -
+Laplacian kernel ridge           0.0122 +- 0.0006                 -                 -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.1304 +- 0.0024
+  Mondrian-CART (new) - RF (sklearn): +0.0017 +- 0.0004
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0096 +- 0.0005
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0157 +- 0.0004
+
+=== M = 50 trees ===
+method                                 test MSE   median lifetime   grid-edge picks
+Mondrian (width)                 0.1599 +- 0.0078              94.4              0/10
+Mondrian, oracle features        0.0176 +- 0.0007               251              3/10
+Mondrian-CART (new)              0.0270 +- 0.0019               699              3/10
+RF (sklearn)                     0.0258 +- 0.0015                 -                 -
+Laplacian kernel ridge           0.0122 +- 0.0006                 -                 -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.1329 +- 0.0021
+  Mondrian-CART (new) - RF (sklearn): +0.0012 +- 0.0004
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0094 +- 0.0005
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0148 +- 0.0005
+
+raw per-seed results saved to compare_results.json

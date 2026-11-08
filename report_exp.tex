@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+\title{Exponential Feature Selection in the Data-Adaptive Mondrian Forest}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Idea}
+
+In Mondrian-CART the split feature is drawn with $p_j \propto s_j$, where $s_j$ is the expected CART
+variance reduction of a uniformly random split along feature $j$. When $d$ is large, the many noise
+features have small but nonzero scores, and together they take most of the probability, especially
+in deep cells. We replace this rule by
+\[
+  p_j \;\propto\; \exp\!\Big(\beta\,\frac{s_j}{\max_k s_k}\Big), \qquad \beta = 10
+  \qquad (\text{Mondrian-CART-exp}).
+\]
+The exponential widens the gap between high- and low-score features, while features with equal scores
+still get equal probability. Scores are divided by the cell's largest score because raw scores shrink
+with the number of points in the cell; without this, $e^{s_j}$ would be nearly uniform in deep cells.
+The exponential clock is unchanged.
+
+\paragraph{Setup.} $X \sim \mathrm{Unif}[0,1]^d$,
+$y = \sin(4u_0) + 2(u_1 - 0.5)^2 + u_2 + \varepsilon$, with $\varepsilon \sim N(0, 0.1^2)$. In the
+\emph{axis-aligned} setting, $u_0, u_1, u_2$ are the first three columns of $X$. In the \emph{rotated}
+setting, they are three random orthonormal projections of $X$, so every column carries a little of the
+signal. We use $n_{\text{train}} = 800$, 10 seeds and $M = 50$ trees. The lifetime of each Mondrian
+forest is tuned on a validation set; for RF, \texttt{max\_features} and \texttt{min\_samples\_leaf} are
+tuned on the same set. Mondrian-CART-null (CART score minus the noise baseline
+$\mathrm{SSE}/(n-1)$, clipped at 0) is a separate fix of Mondrian-CART and is compared side by side.
+
+\section{Results}
+
+\paragraph{Where the splits go.} In the axis-aligned setting with $d = 50$ (chance level 6\%), the share
+of splits on the 3 relevant features is 12\% for CART, 18\% for CART-null and 28\% for CART-exp
+(5 seeds, 10 trees).
+
+\paragraph{Test MSE.} Mean over 10 seeds, $M = 50$; the best Mondrian variant in each column is in bold.
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Axis-aligned} & \multicolumn{2}{c}{Rotated} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Method & $d=10$ & $d=50$ & $d=10$ & $d=50$ \\
+\midrule
+Mondrian-CART      & 0.0270          & 0.0588          & 0.1622          & 0.4035 \\
+Mondrian-CART-null & \textbf{0.0232} & 0.0358          & 0.1477          & 0.3810 \\
+Mondrian-CART-exp  & 0.0263          & \textbf{0.0310} & \textbf{0.1439} & \textbf{0.3712} \\
+RF (tuned)         & 0.0259          & 0.0329          & 0.1696          & 0.3714 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Conclusions}
+
+\begin{itemize}
+  \item \textbf{CART-exp improves on CART} in every setting and every $d \in \{10, 20, 30, 50\}$.
+  \item \textbf{CART-exp vs.\ CART-null.} In the rotated setting, CART-exp is better for every $d$.
+    In the axis-aligned setting, CART-null is slightly better for $d \le 20$, the two tie at $d = 30$,
+    and CART-exp is better at $d = 50$. The advantage of CART-exp grows with $d$.
+  \item \textbf{CART-exp vs.\ RF.} CART-exp matches or beats RF in all cases. It ties at
+    axis-aligned $d = 10$ and rotated $d = 50$, and is better everywhere else.
+\end{itemize}
+All differences stated above are at least 2 paired standard errors, except those described as ties.
+
+\section{Caveats and next steps}
+
+\begin{itemize}
+  \item Only $\beta = 10$ has been tested. A smaller $\beta$ can be worse than proportional sampling:
+    with $\beta = 3$, the minimum weight $e^{-\beta} \approx 5\%$ of the top feature is larger than
+    what proportional sampling gives noise features in large cells.
+  \item CART-exp often picks the largest lifetime in the grid (up to 6 of 10 seeds). We will extend
+    the grid, or add $\lambda = \infty$, to check whether this limits its performance at small $d$.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,24 @@
+# Initial comparison of standard Mondrian, data-adaptive Mondrian, and Random Forest
+# on axis-aligned regression data (d=10, 3 relevant features). 
+# Uses 10 trees per model, one seed
+
+d=10, n_train=800, var(y_test)=0.379, noise var=0.01
+  width lifetime=   0.500 val_mse=0.3865 leaves=   1.1 (0.0s)
+  width lifetime=   1.177 val_mse=0.3841 leaves=   2.6 (0.0s)
+  width lifetime=   2.770 val_mse=0.3390 leaves=   6.4 (0.0s)
+  width lifetime=   6.518 val_mse=0.2251 leaves=  55.5 (0.0s)
+  width lifetime=  15.341 val_mse=0.2390 leaves= 385.3 (0.1s)
+  width lifetime=  36.106 val_mse=0.1779 leaves= 778.8 (0.3s)
+  width lifetime=  84.978 val_mse=0.1816 leaves= 799.7 (0.3s)
+  width lifetime= 200.000 val_mse=0.1995 leaves= 800.0 (0.3s)
+==> width: best lifetime=36.106, TEST mse=0.1891
+  cart  lifetime=   0.050 val_mse=0.3866 leaves=   1.0 (0.0s)
+  cart  lifetime=   0.148 val_mse=0.2889 leaves=   1.7 (0.0s)
+  cart  lifetime=   0.439 val_mse=0.1508 leaves=   4.5 (0.0s)
+  cart  lifetime=   1.299 val_mse=0.0942 leaves=   7.9 (0.0s)
+  cart  lifetime=   3.848 val_mse=0.0542 leaves=  22.5 (0.1s)
+  cart  lifetime=  11.399 val_mse=0.0394 leaves=  68.4 (0.2s)
+  cart  lifetime=  33.762 val_mse=0.0314 leaves= 180.7 (0.5s)
+  cart  lifetime= 100.000 val_mse=0.0281 leaves= 414.8 (0.9s)
+==> cart: best lifetime=100.000, TEST mse=0.0314
+==> sklearn RF (M=10): TEST mse=0.0298

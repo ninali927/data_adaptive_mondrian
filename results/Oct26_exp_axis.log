@@ -1,0 +1,306 @@
+
+##### d = 10: running 10 seeds, M in [10, 30, 50]
+  d=10 seed 5 done in 109s
+  d=10 seed 6 done in 109s
+  d=10 seed 3 done in 110s
+  d=10 seed 8 done in 110s
+  d=10 seed 7 done in 110s
+  d=10 seed 4 done in 111s
+  d=10 seed 9 done in 111s
+  d=10 seed 2 done in 111s
+  d=10 seed 1 done in 111s
+  d=10 seed 0 done in 113s
+
+########## d = 10 (3 latent coordinates), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 10, M = 10 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.1702 +- 0.0162              lifetime 63     0 low / 0 high
+Mondrian-CART            0.0328 +- 0.0017             lifetime 261     0 low / 1 high
+Mondrian-CART-null       0.0270 +- 0.0017        lifetime 1.87e+03     0 low / 2 high
+Mondrian-CART-exp        0.0292 +- 0.0016             lifetime 480     0 low / 1 high
+RF                       0.0288 +- 0.0015             mf=1.0,msl=3                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.1374 +- 0.0048
+  Mondrian-CART - RF: +0.0039 +- 0.0006
+  Mondrian-CART-null - Mondrian: -0.1432 +- 0.0050
+  Mondrian-CART-null - RF: -0.0018 +- 0.0004
+  Mondrian-CART-exp - Mondrian: -0.1410 +- 0.0049
+  Mondrian-CART-exp - RF: +0.0003 +- 0.0005
+  Mondrian-CART-null - Mondrian-CART: -0.0058 +- 0.0005
+  Mondrian-CART-exp - Mondrian-CART: -0.0036 +- 0.0005
+  Mondrian-CART-exp - Mondrian-CART-null: +0.0022 +- 0.0003
+
+=== d = 10, M = 30 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.1584 +- 0.0082            lifetime 47.3     0 low / 0 high
+Mondrian-CART            0.0280 +- 0.0015             lifetime 699     0 low / 2 high
+Mondrian-CART-null       0.0237 +- 0.0014             lifetime 699     0 low / 1 high
+Mondrian-CART-exp        0.0267 +- 0.0016             lifetime 699     0 low / 3 high
+RF                       0.0263 +- 0.0015             mf=1.0,msl=1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.1304 +- 0.0024
+  Mondrian-CART - RF: +0.0016 +- 0.0004
+  Mondrian-CART-null - Mondrian: -0.1347 +- 0.0026
+  Mondrian-CART-null - RF: -0.0027 +- 0.0004
+  Mondrian-CART-exp - Mondrian: -0.1317 +- 0.0025
+  Mondrian-CART-exp - RF: +0.0003 +- 0.0004
+  Mondrian-CART-null - Mondrian-CART: -0.0043 +- 0.0003
+  Mondrian-CART-exp - Mondrian-CART: -0.0013 +- 0.0002
+  Mondrian-CART-exp - Mondrian-CART-null: +0.0030 +- 0.0003
+
+=== d = 10, M = 50 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.1599 +- 0.0078            lifetime 94.4     0 low / 0 high
+Mondrian-CART            0.0270 +- 0.0019             lifetime 699     0 low / 3 high
+Mondrian-CART-null       0.0232 +- 0.0016           lifetime 5e+03     0 low / 4 high
+Mondrian-CART-exp        0.0263 +- 0.0014           lifetime 5e+03     0 low / 6 high
+RF                       0.0259 +- 0.0016             mf=1.0,msl=1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.1329 +- 0.0021
+  Mondrian-CART - RF: +0.0011 +- 0.0005
+  Mondrian-CART-null - Mondrian: -0.1368 +- 0.0023
+  Mondrian-CART-null - RF: -0.0027 +- 0.0004
+  Mondrian-CART-exp - Mondrian: -0.1336 +- 0.0023
+  Mondrian-CART-exp - RF: +0.0004 +- 0.0004
+  Mondrian-CART-null - Mondrian-CART: -0.0038 +- 0.0003
+  Mondrian-CART-exp - Mondrian-CART: -0.0007 +- 0.0003
+  Mondrian-CART-exp - Mondrian-CART-null: +0.0031 +- 0.0001
+
+##### d = 20: running 10 seeds, M in [10, 30, 50]
+  d=20 seed 2 done in 200s
+  d=20 seed 0 done in 202s
+  d=20 seed 9 done in 202s
+  d=20 seed 6 done in 202s
+  d=20 seed 8 done in 202s
+  d=20 seed 4 done in 203s
+  d=20 seed 3 done in 205s
+  d=20 seed 1 done in 206s
+  d=20 seed 5 done in 207s
+  d=20 seed 7 done in 209s
+
+########## d = 20 (3 latent coordinates), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 20, M = 10 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.2740 +- 0.0282              lifetime 63     0 low / 0 high
+Mondrian-CART            0.0448 +- 0.0036             lifetime 196     0 low / 0 high
+Mondrian-CART-null       0.0333 +- 0.0028             lifetime 523     0 low / 0 high
+Mondrian-CART-exp        0.0316 +- 0.0018        lifetime 3.74e+03     0 low / 1 high
+RF                       0.0337 +- 0.0019             mf=1.0,msl=3                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2292 +- 0.0086
+  Mondrian-CART - RF: +0.0110 +- 0.0011
+  Mondrian-CART-null - Mondrian: -0.2407 +- 0.0084
+  Mondrian-CART-null - RF: -0.0005 +- 0.0007
+  Mondrian-CART-exp - Mondrian: -0.2424 +- 0.0086
+  Mondrian-CART-exp - RF: -0.0022 +- 0.0004
+  Mondrian-CART-null - Mondrian-CART: -0.0115 +- 0.0007
+  Mondrian-CART-exp - Mondrian-CART: -0.0132 +- 0.0008
+  Mondrian-CART-exp - Mondrian-CART-null: -0.0017 +- 0.0005
+
+=== d = 20, M = 30 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.2591 +- 0.0194            lifetime 47.3     0 low / 0 high
+Mondrian-CART            0.0390 +- 0.0030             lifetime 523     0 low / 0 high
+Mondrian-CART-null       0.0284 +- 0.0024             lifetime inf     0 low / 5 high
+Mondrian-CART-exp        0.0292 +- 0.0017        lifetime 3.74e+03     0 low / 1 high
+RF                       0.0307 +- 0.0014             mf=1.0,msl=1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2201 +- 0.0056
+  Mondrian-CART - RF: +0.0082 +- 0.0008
+  Mondrian-CART-null - Mondrian: -0.2307 +- 0.0056
+  Mondrian-CART-null - RF: -0.0023 +- 0.0005
+  Mondrian-CART-exp - Mondrian: -0.2298 +- 0.0059
+  Mondrian-CART-exp - RF: -0.0015 +- 0.0003
+  Mondrian-CART-null - Mondrian-CART: -0.0106 +- 0.0006
+  Mondrian-CART-exp - Mondrian-CART: -0.0097 +- 0.0007
+  Mondrian-CART-exp - Mondrian-CART-null: +0.0009 +- 0.0004
+
+=== d = 20, M = 50 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.2531 +- 0.0141              lifetime 63     0 low / 0 high
+Mondrian-CART            0.0370 +- 0.0026         lifetime 1.4e+03     0 low / 0 high
+Mondrian-CART-null       0.0275 +- 0.0019        lifetime 2.57e+03     0 low / 3 high
+Mondrian-CART-exp        0.0287 +- 0.0018        lifetime 3.74e+03     0 low / 1 high
+RF                       0.0301 +- 0.0015             mf=1.0,msl=1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2161 +- 0.0038
+  Mondrian-CART - RF: +0.0069 +- 0.0006
+  Mondrian-CART-null - Mondrian: -0.2256 +- 0.0040
+  Mondrian-CART-null - RF: -0.0026 +- 0.0004
+  Mondrian-CART-exp - Mondrian: -0.2244 +- 0.0041
+  Mondrian-CART-exp - RF: -0.0014 +- 0.0003
+  Mondrian-CART-null - Mondrian-CART: -0.0095 +- 0.0004
+  Mondrian-CART-exp - Mondrian-CART: -0.0083 +- 0.0005
+  Mondrian-CART-exp - Mondrian-CART-null: +0.0012 +- 0.0002
+
+##### d = 30: running 10 seeds, M in [10, 30, 50]
+  d=30 seed 4 done in 291s
+  d=30 seed 5 done in 292s
+  d=30 seed 3 done in 294s
+  d=30 seed 8 done in 294s
+  d=30 seed 6 done in 295s
+  d=30 seed 2 done in 295s
+  d=30 seed 1 done in 296s
+  d=30 seed 0 done in 298s
+  d=30 seed 7 done in 300s
+  d=30 seed 9 done in 301s
+
+########## d = 30 (3 latent coordinates), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 30, M = 10 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.3159 +- 0.0198            lifetime 31.6     0 low / 0 high
+Mondrian-CART            0.0526 +- 0.0027        lifetime 1.44e+03     0 low / 2 high
+Mondrian-CART-null       0.0368 +- 0.0018             lifetime 539     0 low / 2 high
+Mondrian-CART-exp        0.0344 +- 0.0019        lifetime 3.85e+03     0 low / 2 high
+RF                       0.0364 +- 0.0025             mf=1.0,msl=5                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2634 +- 0.0065
+  Mondrian-CART - RF: +0.0161 +- 0.0012
+  Mondrian-CART-null - Mondrian: -0.2792 +- 0.0062
+  Mondrian-CART-null - RF: +0.0003 +- 0.0012
+  Mondrian-CART-exp - Mondrian: -0.2815 +- 0.0061
+  Mondrian-CART-exp - RF: -0.0020 +- 0.0009
+  Mondrian-CART-null - Mondrian-CART: -0.0158 +- 0.0008
+  Mondrian-CART-exp - Mondrian-CART: -0.0182 +- 0.0008
+  Mondrian-CART-exp - Mondrian-CART-null: -0.0024 +- 0.0006
+
+=== d = 30, M = 30 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.2923 +- 0.0152            lifetime 31.6     0 low / 0 high
+Mondrian-CART            0.0464 +- 0.0015         lifetime 2.1e+03     0 low / 3 high
+Mondrian-CART-null       0.0322 +- 0.0021        lifetime 5.61e+03     0 low / 4 high
+Mondrian-CART-exp        0.0313 +- 0.0014        lifetime 3.85e+03     0 low / 3 high
+RF                       0.0336 +- 0.0018             mf=1.0,msl=1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2458 +- 0.0044
+  Mondrian-CART - RF: +0.0129 +- 0.0008
+  Mondrian-CART-null - Mondrian: -0.2600 +- 0.0044
+  Mondrian-CART-null - RF: -0.0013 +- 0.0008
+  Mondrian-CART-exp - Mondrian: -0.2609 +- 0.0047
+  Mondrian-CART-exp - RF: -0.0022 +- 0.0004
+  Mondrian-CART-null - Mondrian-CART: -0.0142 +- 0.0005
+  Mondrian-CART-exp - Mondrian-CART: -0.0151 +- 0.0006
+  Mondrian-CART-exp - Mondrian-CART-null: -0.0009 +- 0.0006
+
+=== d = 30, M = 50 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.2929 +- 0.0177            lifetime 31.6     0 low / 0 high
+Mondrian-CART            0.0446 +- 0.0018        lifetime 1.44e+03     0 low / 2 high
+Mondrian-CART-null       0.0313 +- 0.0018         lifetime 2.1e+03     0 low / 3 high
+Mondrian-CART-exp        0.0305 +- 0.0016             lifetime 784     0 low / 1 high
+RF                       0.0328 +- 0.0017             mf=1.0,msl=1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2484 +- 0.0054
+  Mondrian-CART - RF: +0.0118 +- 0.0007
+  Mondrian-CART-null - Mondrian: -0.2616 +- 0.0052
+  Mondrian-CART-null - RF: -0.0015 +- 0.0007
+  Mondrian-CART-exp - Mondrian: -0.2624 +- 0.0054
+  Mondrian-CART-exp - RF: -0.0023 +- 0.0004
+  Mondrian-CART-null - Mondrian-CART: -0.0133 +- 0.0006
+  Mondrian-CART-exp - Mondrian-CART: -0.0141 +- 0.0007
+  Mondrian-CART-exp - Mondrian-CART-null: -0.0008 +- 0.0005
+
+##### d = 50: running 10 seeds, M in [10, 30, 50]
+  d=50 seed 2 done in 487s
+  d=50 seed 1 done in 491s
+  d=50 seed 0 done in 492s
+  d=50 seed 6 done in 492s
+  d=50 seed 7 done in 497s
+  d=50 seed 5 done in 500s
+  d=50 seed 8 done in 500s
+  d=50 seed 3 done in 502s
+  d=50 seed 4 done in 503s
+  d=50 seed 9 done in 508s
+
+########## d = 50 (3 latent coordinates), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 50, M = 10 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.3574 +- 0.0207            lifetime 23.7     0 low / 0 high
+Mondrian-CART            0.0681 +- 0.0054             lifetime 898     0 low / 2 high
+Mondrian-CART-null       0.0420 +- 0.0021             lifetime inf     0 low / 5 high
+Mondrian-CART-exp        0.0340 +- 0.0017             lifetime 745     0 low / 1 high
+RF                       0.0367 +- 0.0015             mf=1.0,msl=1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2893 +- 0.0060
+  Mondrian-CART - RF: +0.0314 +- 0.0017
+  Mondrian-CART-null - Mondrian: -0.3153 +- 0.0064
+  Mondrian-CART-null - RF: +0.0053 +- 0.0008
+  Mondrian-CART-exp - Mondrian: -0.3234 +- 0.0066
+  Mondrian-CART-exp - RF: -0.0027 +- 0.0004
+  Mondrian-CART-null - Mondrian-CART: -0.0261 +- 0.0015
+  Mondrian-CART-exp - Mondrian-CART: -0.0341 +- 0.0016
+  Mondrian-CART-exp - Mondrian-CART-null: -0.0080 +- 0.0007
+
+=== d = 50, M = 30 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.3345 +- 0.0187            lifetime 31.6     0 low / 0 high
+Mondrian-CART            0.0592 +- 0.0041             lifetime 336     0 low / 1 high
+Mondrian-CART-null       0.0374 +- 0.0021        lifetime 9.35e+03     0 low / 3 high
+Mondrian-CART-exp        0.0315 +- 0.0009        lifetime 1.31e+03     0 low / 0 high
+RF                       0.0334 +- 0.0016             mf=1.0,msl=3                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2753 +- 0.0052
+  Mondrian-CART - RF: +0.0258 +- 0.0015
+  Mondrian-CART-null - Mondrian: -0.2971 +- 0.0056
+  Mondrian-CART-null - RF: +0.0040 +- 0.0007
+  Mondrian-CART-exp - Mondrian: -0.3030 +- 0.0059
+  Mondrian-CART-exp - RF: -0.0019 +- 0.0005
+  Mondrian-CART-null - Mondrian-CART: -0.0218 +- 0.0013
+  Mondrian-CART-exp - Mondrian-CART: -0.0277 +- 0.0013
+  Mondrian-CART-exp - Mondrian-CART-null: -0.0059 +- 0.0005
+
+=== d = 50, M = 50 trees ===
+method                         test MSE           chosen setting    grid-edge picks
+Mondrian                 0.3321 +- 0.0176            lifetime 31.6     0 low / 0 high
+Mondrian-CART            0.0588 +- 0.0039             lifetime 336     0 low / 1 high
+Mondrian-CART-null       0.0358 +- 0.0013         lifetime 3.5e+03     0 low / 2 high
+Mondrian-CART-exp        0.0310 +- 0.0014        lifetime 9.35e+03     0 low / 4 high
+RF                       0.0329 +- 0.0018             mf=1.0,msl=3                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART - Mondrian: -0.2733 +- 0.0048
+  Mondrian-CART - RF: +0.0259 +- 0.0013
+  Mondrian-CART-null - Mondrian: -0.2963 +- 0.0054
+  Mondrian-CART-null - RF: +0.0030 +- 0.0006
+  Mondrian-CART-exp - Mondrian: -0.3011 +- 0.0057
+  Mondrian-CART-exp - RF: -0.0019 +- 0.0005
+  Mondrian-CART-null - Mondrian-CART: -0.0230 +- 0.0011
+  Mondrian-CART-exp - Mondrian-CART: -0.0278 +- 0.0013
+  Mondrian-CART-exp - Mondrian-CART-null: -0.0049 +- 0.0004
+
+=== Summary across dimensions: mean test MSE, M = 50 trees ===
+method                    d=10      d=20      d=30      d=50
+Mondrian                0.1599    0.2531    0.2929    0.3321
+Mondrian-CART           0.0270    0.0370    0.0446    0.0588
+Mondrian-CART-null      0.0232    0.0275    0.0313    0.0358
+Mondrian-CART-exp       0.0263    0.0287    0.0305    0.0310
+RF                      0.0259    0.0301    0.0328    0.0329
+
+=== Summary across dimensions: mean test MSE, M = 10 trees ===
+method                    d=10      d=20      d=30      d=50
+Mondrian                0.1702    0.2740    0.3159    0.3574
+Mondrian-CART           0.0328    0.0448    0.0526    0.0681
+Mondrian-CART-null      0.0270    0.0333    0.0368    0.0420
+Mondrian-CART-exp       0.0292    0.0316    0.0344    0.0340
+RF                      0.0288    0.0337    0.0364    0.0367
+
+=== Share of the gap (Mondrian -> RF) closed, M = 50 trees ===
+0% = same as Mondrian, 100% = same as RF, above 100% = better than RF
+method                    d=10      d=20      d=30      d=50
+Mondrian-CART              99%       97%       95%       91%
+Mondrian-CART-null        102%      101%      101%       99%
+Mondrian-CART-exp         100%      101%      101%      101%
+
+=== Share of the gap (Mondrian -> RF) closed, M = 10 trees ===
+0% = same as Mondrian, 100% = same as RF, above 100% = better than RF
+method                    d=10      d=20      d=30      d=50
+Mondrian-CART              97%       95%       94%       90%
+Mondrian-CART-null        101%      100%      100%       98%
+Mondrian-CART-exp         100%      101%      101%      101%

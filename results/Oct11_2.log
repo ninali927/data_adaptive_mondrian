@@ -1,0 +1,76 @@
+
+##### d = 10: running 10 seeds, 10 trees
+  d=10 seed 5 done in 13s
+  d=10 seed 9 done in 14s
+  d=10 seed 3 done in 14s
+  d=10 seed 1 done in 14s
+  d=10 seed 2 done in 14s
+  d=10 seed 0 done in 14s
+  d=10 seed 6 done in 14s
+  d=10 seed 8 done in 14s
+  d=10 seed 7 done in 14s
+  d=10 seed 4 done in 14s
+
+=== d = 10: share of splits on the 3 relevant features (feature-blind chance level = 30.0%), 10 seeds ===
+method                       depth 0-2   depth 3-5   depth 6-9   depth 10+  all splits  splits/tree  median lifetime
+Mondrian (width)                 32.9%       30.2%       29.5%       29.7%       29.7%          706               63
+Mondrian-CART (new)              89.2%       58.6%       42.4%       35.4%       40.3%          598              261
+Mondrian-CART-null (new)         94.7%       74.6%       56.6%       46.9%       54.2%          415              699
+RF (default)                    100.0%       60.2%       34.7%       30.4%       36.6%          505                -
+
+##### d = 20: running 10 seeds, 10 trees
+  d=20 seed 2 done in 25s
+  d=20 seed 6 done in 25s
+  d=20 seed 8 done in 25s
+  d=20 seed 3 done in 25s
+  d=20 seed 0 done in 25s
+  d=20 seed 4 done in 25s
+  d=20 seed 9 done in 25s
+  d=20 seed 1 done in 25s
+  d=20 seed 7 done in 25s
+  d=20 seed 5 done in 25s
+
+=== d = 20: share of splits on the 3 relevant features (feature-blind chance level = 15.0%), 10 seeds ===
+method                       depth 0-2   depth 3-5   depth 6-9   depth 10+  all splits  splits/tree  median lifetime
+Mondrian (width)                 19.0%       14.1%       14.9%       14.7%       14.8%          693               63
+Mondrian-CART (new)              77.9%       41.8%       24.4%       18.6%       23.0%          635              196
+Mondrian-CART-null (new)         91.2%       61.6%       38.2%       26.9%       36.3%          396              523
+RF (default)                    100.0%       46.9%       19.3%       15.4%       21.8%          505                -
+
+##### d = 30: running 10 seeds, 10 trees
+  d=30 seed 3 done in 36s
+  d=30 seed 0 done in 36s
+  d=30 seed 5 done in 37s
+  d=30 seed 2 done in 37s
+  d=30 seed 1 done in 37s
+  d=30 seed 9 done in 37s
+  d=30 seed 7 done in 37s
+  d=30 seed 4 done in 37s
+  d=30 seed 8 done in 37s
+  d=30 seed 6 done in 38s
+
+=== d = 30: share of splits on the 3 relevant features (feature-blind chance level = 10.0%), 10 seeds ===
+method                       depth 0-2   depth 3-5   depth 6-9   depth 10+  all splits  splits/tree  median lifetime
+Mondrian (width)                 10.7%       10.0%       10.1%        9.8%        9.9%          648             31.6
+Mondrian-CART (new)              71.9%       34.5%       17.8%       12.3%       16.3%          612         1.44e+03
+Mondrian-CART-null (new)         86.5%       53.5%       32.5%       22.0%       32.2%          315              293
+RF (default)                     99.9%       41.0%       13.1%       10.2%       16.2%          505                -
+
+##### d = 50: running 10 seeds, 10 trees
+  d=50 seed 2 done in 61s
+  d=50 seed 3 done in 62s
+  d=50 seed 4 done in 63s
+  d=50 seed 0 done in 63s
+  d=50 seed 7 done in 63s
+  d=50 seed 5 done in 63s
+  d=50 seed 8 done in 63s
+  d=50 seed 6 done in 63s
+  d=50 seed 9 done in 64s
+  d=50 seed 1 done in 63s
+
+=== d = 50: share of splits on the 3 relevant features (feature-blind chance level = 6.0%), 10 seeds ===
+method                       depth 0-2   depth 3-5   depth 6-9   depth 10+  all splits  splits/tree  median lifetime
+Mondrian (width)                  7.2%        5.9%        5.6%        5.9%        5.8%          471             23.7
+Mondrian-CART (new)              63.2%       25.0%       11.4%        7.7%       10.8%          610              898
+Mondrian-CART-null (new)         80.6%       42.9%       21.3%       13.1%       20.9%          385              898
+RF (default)                     99.9%       33.1%        9.1%        6.3%       11.9%          505                -

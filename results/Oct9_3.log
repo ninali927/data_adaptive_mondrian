@@ -1,0 +1,274 @@
+
+##### d = 10: running 10 seeds, M in [10, 30, 50]
+  d=10 seed 5 done in 54s
+  d=10 seed 8 done in 54s
+  d=10 seed 7 done in 55s
+  d=10 seed 9 done in 55s
+  d=10 seed 4 done in 56s
+  d=10 seed 3 done in 56s
+  d=10 seed 6 done in 56s
+  d=10 seed 1 done in 56s
+  d=10 seed 0 done in 56s
+  d=10 seed 2 done in 56s
+
+########## d = 10 (3 relevant features), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 10, M = 10 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.1702 +- 0.0162              lifetime 63     0 low / 0 high
+Mondrian, oracle features        0.0222 +- 0.0018             lifetime 251     0 low / 2 high
+Mondrian-CART (new)              0.0328 +- 0.0017             lifetime 261     0 low / 1 high
+RF (default)                     0.0287 +- 0.0016                 defaults                  -
+RF (tuned)                       0.0288 +- 0.0015             mf=1.0,msl=3                  -
+ExtraTrees (tuned)               0.0279 +- 0.0020             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0122 +- 0.0006            g0=0.05,a=0.1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.1374 +- 0.0048
+  Mondrian-CART (new) - RF (tuned): +0.0039 +- 0.0006
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0049 +- 0.0007
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0106 +- 0.0007
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0205 +- 0.0006
+
+=== d = 10, M = 30 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.1584 +- 0.0082            lifetime 47.3     0 low / 0 high
+Mondrian, oracle features        0.0183 +- 0.0006             lifetime 251     0 low / 3 high
+Mondrian-CART (new)              0.0280 +- 0.0015             lifetime 699     0 low / 2 high
+RF (default)                     0.0262 +- 0.0015                 defaults                  -
+RF (tuned)                       0.0263 +- 0.0015             mf=1.0,msl=1                  -
+ExtraTrees (tuned)               0.0247 +- 0.0013             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0122 +- 0.0006            g0=0.05,a=0.1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.1304 +- 0.0024
+  Mondrian-CART (new) - RF (tuned): +0.0016 +- 0.0004
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0033 +- 0.0003
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0096 +- 0.0005
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0157 +- 0.0004
+
+=== d = 10, M = 50 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.1599 +- 0.0078            lifetime 94.4     0 low / 0 high
+Mondrian, oracle features        0.0176 +- 0.0007             lifetime 251     0 low / 3 high
+Mondrian-CART (new)              0.0270 +- 0.0019             lifetime 699     0 low / 3 high
+RF (default)                     0.0258 +- 0.0015                 defaults                  -
+RF (tuned)                       0.0259 +- 0.0016             mf=1.0,msl=1                  -
+ExtraTrees (tuned)               0.0241 +- 0.0012             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0122 +- 0.0006            g0=0.05,a=0.1                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.1329 +- 0.0021
+  Mondrian-CART (new) - RF (tuned): +0.0011 +- 0.0005
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0029 +- 0.0004
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0094 +- 0.0005
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0148 +- 0.0005
+
+##### d = 20: running 10 seeds, M in [10, 30, 50]
+  d=20 seed 7 done in 87s
+  d=20 seed 8 done in 88s
+  d=20 seed 9 done in 88s
+  d=20 seed 1 done in 88s
+  d=20 seed 5 done in 88s
+  d=20 seed 3 done in 89s
+  d=20 seed 6 done in 89s
+  d=20 seed 2 done in 89s
+  d=20 seed 0 done in 90s
+  d=20 seed 4 done in 90s
+
+########## d = 20 (3 relevant features), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 20, M = 10 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.2740 +- 0.0282              lifetime 63     0 low / 0 high
+Mondrian, oracle features        0.0221 +- 0.0012             lifetime 251     0 low / 4 high
+Mondrian-CART (new)              0.0448 +- 0.0036             lifetime 196     0 low / 0 high
+RF (default)                     0.0338 +- 0.0021                 defaults                  -
+RF (tuned)                       0.0337 +- 0.0019             mf=1.0,msl=3                  -
+ExtraTrees (tuned)               0.0317 +- 0.0018             mf=1.0,msl=3                  -
+Laplacian kernel ridge           0.0144 +- 0.0006           g0=0.05,a=0.01                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2292 +- 0.0086
+  Mondrian-CART (new) - RF (tuned): +0.0110 +- 0.0011
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0131 +- 0.0007
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0227 +- 0.0012
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0304 +- 0.0011
+
+=== d = 20, M = 30 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.2591 +- 0.0194            lifetime 47.3     0 low / 0 high
+Mondrian, oracle features        0.0191 +- 0.0008             lifetime 501     0 low / 4 high
+Mondrian-CART (new)              0.0390 +- 0.0030             lifetime 523     0 low / 0 high
+RF (default)                     0.0307 +- 0.0014                 defaults                  -
+RF (tuned)                       0.0307 +- 0.0014             mf=1.0,msl=1                  -
+ExtraTrees (tuned)               0.0281 +- 0.0018             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0144 +- 0.0006           g0=0.05,a=0.01                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2201 +- 0.0056
+  Mondrian-CART (new) - RF (tuned): +0.0082 +- 0.0008
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0108 +- 0.0007
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0199 +- 0.0009
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0246 +- 0.0010
+
+=== d = 20, M = 50 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.2531 +- 0.0141              lifetime 63     0 low / 0 high
+Mondrian, oracle features        0.0184 +- 0.0009             lifetime 251     0 low / 2 high
+Mondrian-CART (new)              0.0370 +- 0.0026         lifetime 1.4e+03     0 low / 0 high
+RF (default)                     0.0301 +- 0.0015                 defaults                  -
+RF (tuned)                       0.0301 +- 0.0015             mf=1.0,msl=1                  -
+ExtraTrees (tuned)               0.0273 +- 0.0016             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0144 +- 0.0006           g0=0.05,a=0.01                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2161 +- 0.0038
+  Mondrian-CART (new) - RF (tuned): +0.0069 +- 0.0006
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0097 +- 0.0005
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0187 +- 0.0007
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0227 +- 0.0008
+
+##### d = 30: running 10 seeds, M in [10, 30, 50]
+  d=30 seed 4 done in 122s
+  d=30 seed 3 done in 122s
+  d=30 seed 9 done in 122s
+  d=30 seed 1 done in 123s
+  d=30 seed 6 done in 123s
+  d=30 seed 5 done in 123s
+  d=30 seed 8 done in 123s
+  d=30 seed 0 done in 125s
+  d=30 seed 7 done in 125s
+  d=30 seed 2 done in 126s
+
+########## d = 30 (3 relevant features), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 30, M = 10 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.3159 +- 0.0198            lifetime 31.6     0 low / 0 high
+Mondrian, oracle features        0.0226 +- 0.0013             lifetime 501     0 low / 4 high
+Mondrian-CART (new)              0.0526 +- 0.0027        lifetime 1.44e+03     0 low / 2 high
+RF (default)                     0.0372 +- 0.0024                 defaults                  -
+RF (tuned)                       0.0364 +- 0.0025             mf=1.0,msl=5                  -
+ExtraTrees (tuned)               0.0334 +- 0.0027             mf=1.0,msl=3                  -
+Laplacian kernel ridge           0.0147 +- 0.0007           g0=0.05,a=0.01                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2634 +- 0.0065
+  Mondrian-CART (new) - RF (tuned): +0.0161 +- 0.0012
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0192 +- 0.0014
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0300 +- 0.0008
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0379 +- 0.0010
+
+=== d = 30, M = 30 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.2923 +- 0.0152            lifetime 31.6     0 low / 0 high
+Mondrian, oracle features        0.0188 +- 0.0008             lifetime 251     0 low / 2 high
+Mondrian-CART (new)              0.0464 +- 0.0015         lifetime 2.1e+03     0 low / 3 high
+RF (default)                     0.0337 +- 0.0017                 defaults                  -
+RF (tuned)                       0.0336 +- 0.0018             mf=1.0,msl=1                  -
+ExtraTrees (tuned)               0.0305 +- 0.0018             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0147 +- 0.0007           g0=0.05,a=0.01                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2458 +- 0.0044
+  Mondrian-CART (new) - RF (tuned): +0.0129 +- 0.0008
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0159 +- 0.0006
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0277 +- 0.0006
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0317 +- 0.0005
+
+=== d = 30, M = 50 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.2929 +- 0.0177            lifetime 31.6     0 low / 0 high
+Mondrian, oracle features        0.0182 +- 0.0008             lifetime 376     0 low / 2 high
+Mondrian-CART (new)              0.0446 +- 0.0018        lifetime 1.44e+03     0 low / 2 high
+RF (default)                     0.0329 +- 0.0017                 defaults                  -
+RF (tuned)                       0.0328 +- 0.0017             mf=1.0,msl=1                  -
+ExtraTrees (tuned)               0.0296 +- 0.0021             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0147 +- 0.0007           g0=0.05,a=0.01                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2484 +- 0.0054
+  Mondrian-CART (new) - RF (tuned): +0.0118 +- 0.0007
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0150 +- 0.0007
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0264 +- 0.0007
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0299 +- 0.0006
+
+##### d = 50: running 10 seeds, M in [10, 30, 50]
+  d=50 seed 2 done in 194s
+  d=50 seed 4 done in 195s
+  d=50 seed 6 done in 195s
+  d=50 seed 3 done in 195s
+  d=50 seed 1 done in 196s
+  d=50 seed 9 done in 198s
+  d=50 seed 5 done in 198s
+  d=50 seed 8 done in 200s
+  d=50 seed 7 done in 201s
+  d=50 seed 0 done in 200s
+
+########## d = 50 (3 relevant features), n_train=800, noise var=0.01, 10 seeds ##########
+test MSE mean +- std over seeds (lower is better)
+
+=== d = 50, M = 10 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.3574 +- 0.0207            lifetime 23.7     0 low / 0 high
+Mondrian, oracle features        0.0223 +- 0.0014             lifetime 188     0 low / 1 high
+Mondrian-CART (new)              0.0681 +- 0.0054             lifetime 898     0 low / 2 high
+RF (default)                     0.0374 +- 0.0016                 defaults                  -
+RF (tuned)                       0.0367 +- 0.0015             mf=1.0,msl=1                  -
+ExtraTrees (tuned)               0.0354 +- 0.0018             mf=1.0,msl=5                  -
+Laplacian kernel ridge           0.0176 +- 0.0011          g0=0.05,a=0.001                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2893 +- 0.0060
+  Mondrian-CART (new) - RF (tuned): +0.0314 +- 0.0017
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0327 +- 0.0016
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0458 +- 0.0017
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0505 +- 0.0018
+
+=== d = 50, M = 30 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.3345 +- 0.0187            lifetime 31.6     0 low / 0 high
+Mondrian, oracle features        0.0185 +- 0.0009             lifetime 376     0 low / 0 high
+Mondrian-CART (new)              0.0592 +- 0.0041             lifetime 336     0 low / 1 high
+RF (default)                     0.0335 +- 0.0018                 defaults                  -
+RF (tuned)                       0.0334 +- 0.0016             mf=1.0,msl=3                  -
+ExtraTrees (tuned)               0.0317 +- 0.0019             mf=1.0,msl=3                  -
+Laplacian kernel ridge           0.0176 +- 0.0011          g0=0.05,a=0.001                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2753 +- 0.0052
+  Mondrian-CART (new) - RF (tuned): +0.0258 +- 0.0015
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0275 +- 0.0015
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0407 +- 0.0013
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0416 +- 0.0013
+
+=== d = 50, M = 50 trees ===
+method                                 test MSE           chosen setting    grid-edge picks
+Mondrian (width)                 0.3321 +- 0.0176            lifetime 31.6     0 low / 0 high
+Mondrian, oracle features        0.0179 +- 0.0010             lifetime 251     0 low / 0 high
+Mondrian-CART (new)              0.0588 +- 0.0039             lifetime 336     0 low / 1 high
+RF (default)                     0.0329 +- 0.0018                 defaults                  -
+RF (tuned)                       0.0329 +- 0.0018             mf=1.0,msl=3                  -
+ExtraTrees (tuned)               0.0310 +- 0.0016             mf=1.0,msl=1                  -
+Laplacian kernel ridge           0.0176 +- 0.0011          g0=0.05,a=0.001                  -
+paired differences (first minus second), mean +- s.e.:
+  Mondrian-CART (new) - Mondrian (width): -0.2733 +- 0.0048
+  Mondrian-CART (new) - RF (tuned): +0.0259 +- 0.0013
+  Mondrian-CART (new) - ExtraTrees (tuned): +0.0278 +- 0.0014
+  Mondrian-CART (new) - Mondrian, oracle features: +0.0409 +- 0.0012
+  Mondrian-CART (new) - Laplacian kernel ridge: +0.0412 +- 0.0013
+
+=== Summary across dimensions: mean test MSE, M = 50 trees ===
+method                            d=10      d=20      d=30      d=50
+Mondrian (width)                0.1599    0.2531    0.2929    0.3321
+Mondrian, oracle features       0.0176    0.0184    0.0182    0.0179
+Mondrian-CART (new)             0.0270    0.0370    0.0446    0.0588
+RF (default)                    0.0258    0.0301    0.0329    0.0329
+RF (tuned)                      0.0259    0.0301    0.0328    0.0329
+ExtraTrees (tuned)              0.0241    0.0273    0.0296    0.0310
+Laplacian kernel ridge          0.0122    0.0144    0.0147    0.0176
+
+=== Summary across dimensions: mean test MSE, M = 10 trees ===
+method                            d=10      d=20      d=30      d=50
+Mondrian (width)                0.1702    0.2740    0.3159    0.3574
+Mondrian, oracle features       0.0222    0.0221    0.0226    0.0223
+Mondrian-CART (new)             0.0328    0.0448    0.0526    0.0681
+RF (default)                    0.0287    0.0338    0.0372    0.0374
+RF (tuned)                      0.0288    0.0337    0.0364    0.0367
+ExtraTrees (tuned)              0.0279    0.0317    0.0334    0.0354
+Laplacian kernel ridge          0.0122    0.0144    0.0147    0.0176
+
+raw per-seed results saved to compare_results.json

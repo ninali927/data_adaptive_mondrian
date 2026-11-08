@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.nbi
+*.nbc
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+.env
+
+# LaTeX build files
+*.aux
+*.log
+!results/*.log
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.toc
+*.bbl
+*.blg
+report_exp.pdf
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+.claude/
